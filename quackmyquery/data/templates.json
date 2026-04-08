@@ -1,0 +1,79 @@
+[
+    {
+      "toolSlug": "zapier",
+      "professionSlug": "real-estate-agents",
+      "toolName": "Zapier",
+      "professionName": "Residential Real Estate Agents",
+      "coreProblem": "Manually calling new Facebook leads takes too long. By the time you dial, the lead has already moved on to the next listing.",
+      "utilityName": "The 'Instant-Touch' Lead Responder",
+      "blueprintSteps": [
+        "Trigger: New Lead in Facebook Lead Ads",
+        "Filter: Only proceed if a valid Phone Number is provided",
+        "Action: Send SMS via Twilio (Instant follow-up script)",
+        "Action: Create a 'New Lead' task in your HubSpot CRM",
+        "Compliance Note: Ensure your SMS includes 'Reply STOP to opt-out' to stay compliant."
+      ],
+      "copyPasteElement": "Step 1: FB Lead Ads -> Step 2: Filter (Phone exists) -> Step 3: Twilio SMS -> Step 4: HubSpot CRM",
+      "affiliateLink": "https://zapier.com"
+    },
+    {
+      "toolSlug": "make-com",
+      "professionSlug": "shopify-store-owners",
+      "toolName": "Make.com",
+      "professionName": "Shopify Store Owners",
+      "coreProblem": "Manually checking inventory levels and getting surprised by 'Out of Stock' alerts during high-traffic sales.",
+      "utilityName": "The Low-Stock Panic Button",
+      "blueprintSteps": [
+        "Watch Products: Monitor Shopify for any 'Inventory Level Update'.",
+        "Filter: Only proceed if 'Inventory Quantity' is less than 10.",
+        "Action: Send a high-priority Slack message or Email to the fulfillment team with the SKU and a direct link to the restock order page."
+      ],
+      "copyPasteElement": "Shopify: Watch Inventory -> Tool: Numeric Aggregator -> Slack: Post Message (High Priority)",
+      "affiliateLink": "https://www.make.com/en/register?pc=quack"
+    },
+    {
+      "toolSlug": "clickup",
+      "professionSlug": "digital-marketing-agencies",
+      "toolName": "ClickUp",
+      "professionName": "Digital Marketing Agencies",
+      "coreProblem": "Client onboarding feels chaotic and takes hours of manual task creation for every new account.",
+      "utilityName": "The 60-Second Client Onboarder",
+      "blueprintSteps": [
+        "Create a 'Master Onboarding' List Template in ClickUp with all standard tasks (Contract, Access, Kickoff).",
+        "Use the 'Automations' feature: When a status changes to 'Active' in your CRM folder, apply the Master Template.",
+        "Set relative due dates (e.g., 'Kickoff Call' is always 3 days after the list is created)."
+      ],
+      "copyPasteElement": "Trigger: Task Created -> Action: Apply Template (Onboarding V2) -> Action: Assign to Account Manager",
+      "affiliateLink": "https://clickup.com/?fp_ref=quack"
+    },
+    {
+      "toolSlug": "airtable",
+      "professionSlug": "event-planners",
+      "toolName": "Airtable",
+      "professionName": "Wedding & Event Planners",
+      "coreProblem": "Difficulty tracking actual vendor spending against the client's initial budget in real-time.",
+      "utilityName": "The Budget Variance Tracker",
+      "blueprintSteps": [
+        "Create a 'Line Items' table with 'Projected Cost' and 'Actual Cost' currency fields.",
+        "Create a Formula field to show the percentage of the budget remaining.",
+        "Use an 'Interface' to show the client a visual progress bar of their spending."
+      ],
+      "copyPasteElement": "IF({Actual Cost} > {Projected Cost}, '⚠️ Over Budget', '✅ ' & ROUND(({Projected Cost}-{Actual Cost})/{Projected Cost}*100) & '% Remaining')",
+      "affiliateLink": "https://airtable.com/invite/quack"
+    },
+    {
+      "toolSlug": "make-com",
+      "professionSlug": "e-learning-creators",
+      "toolName": "Make.com",
+      "professionName": "Course Creators & Coaches",
+      "coreProblem": "Students drop out of courses because they forget to finish the modules they started.",
+      "utilityName": "The Course Completion Engine",
+      "blueprintSteps": [
+        "Watch Events: Monitor your course platform (Kajabi/Teachable) for 'Module Started'.",
+        "Sleep: Wait 48 hours.",
+        "Filter: If 'Module Completed' is still false, trigger a personalized 'Checking In' email via Mailchimp/ConvertKit."
+      ],
+      "copyPasteElement": "Kajabi: Watch Event -> Tool: Sleep (2 Days) -> Kajabi: Get Enrollment -> Gmail: Send nudge if incomplete",
+      "affiliateLink": "https://www.make.com/en/register?pc=quack"
+    }
+  ]
