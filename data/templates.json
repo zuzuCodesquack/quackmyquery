@@ -1,30 +1,30 @@
 [
   {
     "toolSlug": "zapier",
-    "professionSlug": "real-estate-agents",
+    "professionSlug": "residential-real-estate-agents",
     "toolName": "Zapier",
     "professionName": "Residential Real Estate Agents",
-    "coreProblem": "Losing hot leads because of slow manual follow-ups after a Zillow or Facebook ad inquiry.",
+    "coreProblem": "Are you losing hot leads because of slow manual follow-ups after a Zillow or Facebook ad inquiry?",
     "utilityName": "The 5-Minute Lead Responder",
     "blueprintSteps": [
-      "Trigger: New Lead in Facebook Lead Ads or Zillow.",
-      "Action: Send an automated, personalized SMS via Twilio: 'Hi [Name], thanks for asking about [Property]! Are you free for a quick 2-minute call?'",
-      "Action: Create a 'Follow-up' task in your CRM with the lead's phone number attached."
+      "⚡ Trigger: New Lead in Facebook Lead Ads or Zillow.",
+      "📱 Action: Send an automated, personalized SMS via Twilio: 'Hi [Name], thanks for asking about [Property]! Are you free for a quick 2-minute call?'",
+      "🗂️ Action: Create a 'Follow-up' task in your CRM with the lead's phone number attached."
     ],
     "copyPasteElement": "Trigger: Facebook Lead Ads -> Action: Filter (Only if Phone exists) -> Action: SMS by Zapier -> Action: HubSpot (Create Task)",
-    "affiliateLink": "https://zapier.com/affiliate/quack"
+    "affiliateLink": "https://zapier.com"
   },
   {
     "toolSlug": "make-com",
     "professionSlug": "shopify-store-owners",
     "toolName": "Make.com",
     "professionName": "Shopify Store Owners",
-    "coreProblem": "Manually checking inventory levels and getting surprised by 'Out of Stock' alerts during high-traffic sales.",
+    "coreProblem": "Are you manually checking inventory levels and getting surprised by 'Out of Stock' alerts during high-traffic sales?",
     "utilityName": "The Low-Stock Panic Button",
     "blueprintSteps": [
-      "Watch Products: Monitor Shopify for any 'Inventory Level Update'.",
-      "Filter: Only proceed if 'Inventory Quantity' is less than 10.",
-      "Action: Send a high-priority Slack message or Email to the fulfillment team with the SKU and a direct link to the restock order page."
+      "👀 Watch Products: Monitor Shopify for any 'Inventory Level Update'.",
+      "🔍 Filter: Only proceed if 'Inventory Quantity' is less than 10.",
+      "🚨 Action: Send a high-priority Slack message or Email to the fulfillment team with the SKU and a direct link to the restock order page."
     ],
     "copyPasteElement": "Shopify: Watch Inventory -> Tool: Numeric Aggregator -> Slack: Post Message (High Priority)",
     "affiliateLink": "https://www.make.com/en/register?pc=quack"
@@ -34,44 +34,104 @@
     "professionSlug": "digital-marketing-agencies",
     "toolName": "ClickUp",
     "professionName": "Digital Marketing Agencies",
-    "coreProblem": "Client onboarding feels chaotic and takes hours of manual task creation for every new account.",
+    "coreProblem": "Does client onboarding feel chaotic and take hours of manual task creation for every new account?",
     "utilityName": "The 60-Second Client Onboarder",
     "blueprintSteps": [
-      "Create a 'Master Onboarding' List Template in ClickUp with all standard tasks (Contract, Access, Kickoff).",
-      "Use the 'Automations' feature: When a status changes to 'Active' in your CRM folder, apply the Master Template.",
-      "Set relative due dates (e.g., 'Kickoff Call' is always 3 days after the list is created)."
+      "📝 Create a 'Master Onboarding' List Template in ClickUp with all standard tasks (Contract, Access, Kickoff).",
+      "🤖 Use the 'Automations' feature: When a status changes to 'Active' in your CRM folder, apply the Master Template.",
+      "📅 Set relative due dates (e.g., 'Kickoff Call' is always 3 days after the list is created)."
     ],
     "copyPasteElement": "Trigger: Task Created -> Action: Apply Template (Onboarding V2) -> Action: Assign to Account Manager",
     "affiliateLink": "https://clickup.com/?fp_ref=quack"
   },
   {
     "toolSlug": "airtable",
-    "professionSlug": "event-planners",
+    "professionSlug": "wedding-and-event-planners",
     "toolName": "Airtable",
     "professionName": "Wedding & Event Planners",
-    "coreProblem": "Difficulty tracking actual vendor spending against the client's initial budget in real-time.",
+    "coreProblem": "Are you having difficulty tracking actual vendor spending against the client's initial budget in real-time?",
     "utilityName": "The Budget Variance Tracker",
     "blueprintSteps": [
-      "Create a 'Line Items' table with 'Projected Cost' and 'Actual Cost' currency fields.",
-      "Create a Formula field to show the percentage of the budget remaining.",
-      "Use an 'Interface' to show the client a visual progress bar of their spending."
+      "📊 Create a 'Line Items' table with 'Projected Cost' and 'Actual Cost' currency fields.",
+      "🧮 Create a Formula field to show the percentage of the budget remaining.",
+      "💻 Use an 'Interface' to show the client a visual progress bar of their spending."
     ],
     "copyPasteElement": "IF({Actual Cost} > {Projected Cost}, '⚠️ Over Budget', '✅ ' & ROUND(({Projected Cost}-{Actual Cost})/{Projected Cost}*100) & '% Remaining')",
     "affiliateLink": "https://airtable.com/invite/quack"
   },
   {
     "toolSlug": "make-com",
-    "professionSlug": "e-learning-creators",
+    "professionSlug": "course-creators-and-coaches",
     "toolName": "Make.com",
     "professionName": "Course Creators & Coaches",
-    "coreProblem": "Students drop out of courses because they forget to finish the modules they started.",
+    "coreProblem": "Are students dropping out of your courses because they forget to finish the modules they started?",
     "utilityName": "The Course Completion Engine",
     "blueprintSteps": [
-      "Watch Events: Monitor your course platform (Kajabi/Teachable) for 'Module Started'.",
-      "Sleep: Wait 48 hours.",
-      "Filter: If 'Module Completed' is still false, trigger a personalized 'Checking In' email via Mailchimp/ConvertKit."
+      "⚡ Watch Events: Monitor your course platform (Kajabi/Teachable) for 'Module Started'.",
+      "⏳ Sleep: Wait 48 hours.",
+      "📧 Filter: If 'Module Completed' is still false, trigger a personalized 'Checking In' email via Mailchimp/ConvertKit."
     ],
     "copyPasteElement": "Kajabi: Watch Event -> Tool: Sleep (2 Days) -> Kajabi: Get Enrollment -> Gmail: Send nudge if incomplete",
     "affiliateLink": "https://www.make.com/en/register?pc=quack"
+  },
+  {
+    "toolSlug": "make-com",
+    "professionSlug": "landscapers",
+    "toolName": "Make.com",
+    "professionName": "Landscapers",
+    "coreProblem": "Are you spending hours manually scheduling jobs and messaging clients about sudden weather delays?",
+    "utilityName": "The Weather-Aware Scheduler",
+    "blueprintSteps": [
+      "☁️ Trigger: Weather API forecasts heavy rain for tomorrow.",
+      "📅 Action: Search Google Calendar for tomorrow's outdoor landscaping jobs.",
+      "📱 Action: Automatically send a Twilio SMS to affected clients offering a link to reschedule."
+    ],
+    "copyPasteElement": "Weather API (Rain > 60%) -> Google Calendar (Find Events) -> Twilio (Send SMS)",
+    "affiliateLink": "https://www.make.com/en/register?pc=quack"
+  },
+  {
+    "toolSlug": "clickup",
+    "professionSlug": "small-business-owners",
+    "toolName": "ClickUp",
+    "professionName": "Small Business Owners",
+    "coreProblem": "Are you losing track of vendor invoices and forgetting to follow up on unpaid bills, hurting cash flow?",
+    "utilityName": "The Invoice Tracker Board",
+    "blueprintSteps": [
+      "🗂️ Create a 'Finance' Space in ClickUp with a Kanban board (Statuses: To Pay, Pending, Overdue).",
+      "🤖 Set an automation: When a task stays in 'To Pay' past its due date, automatically change the status to 'Overdue'.",
+      "💬 Action: Tag the accountant or bookkeeper in a comment so they see it instantly."
+    ],
+    "copyPasteElement": "Trigger: Status is To Pay AND past Due Date -> Action: Change to Overdue -> Action: Add Comment (@Accountant)",
+    "affiliateLink": "https://clickup.com/?fp_ref=quack"
+  },
+  {
+    "toolSlug": "zapier",
+    "professionSlug": "e-commerce-brands",
+    "toolName": "Zapier",
+    "professionName": "E-commerce Brands",
+    "coreProblem": "Are you missing opportunities to collect user-generated content from happy customers after a purchase?",
+    "utilityName": "The Auto-Review Collector",
+    "blueprintSteps": [
+      "⚡ Trigger: Order marked as 'Fulfilled' in Shopify.",
+      "⏳ Delay: Wait exactly 14 days to ensure the customer has received and used the product.",
+      "📧 Action: Send a personalized email via Klaviyo asking for a photo review in exchange for a 15% discount."
+    ],
+    "copyPasteElement": "Shopify (Order Fulfilled) -> Delay by Zapier (14 Days) -> Klaviyo (Send Campaign Email)",
+    "affiliateLink": "https://zapier.com"
+  },
+  {
+    "toolSlug": "airtable",
+    "professionSlug": "content-creators",
+    "toolName": "Airtable",
+    "professionName": "Content Creators",
+    "coreProblem": "Are you losing track of brand deal deliverables, deadlines, and invoice statuses across multiple messy spreadsheets?",
+    "utilityName": "The Sponsorship CRM",
+    "blueprintSteps": [
+      "📊 Create a 'Brand Deals' base with fields for 'Deliverable Type', 'Draft Due Date', and 'Payment Status'.",
+      "🔍 Group the view by 'Payment Status' to easily see which brands still owe you money.",
+      "🗂️ Create a linked table for 'Brand Contacts' so you never lose a PR rep's email address."
+    ],
+    "copyPasteElement": "IF({Payment Status} = 'Unpaid', DATETIME_DIFF(TODAY(), {Invoice Sent Date}, 'days') & ' Days Overdue', 'Paid')",
+    "affiliateLink": "https://airtable.com/invite/quack"
   }
 ]

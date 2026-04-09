@@ -1,7 +1,7 @@
 "use client";
 
 import React, { use } from 'react';
-import pageData from '@/../data/templates.json'; 
+import pageData from '../../../../data/templates.json';
 import { notFound } from 'next/navigation';
 
 export default function TemplatePage({ params }: { params: Promise<{ tool: string, profession: string }> }) {
@@ -79,7 +79,7 @@ export default function TemplatePage({ params }: { params: Promise<{ tool: strin
         </section>
 
         {/* Affiliate Link Footer */}
-        <footer className="mt-12 text-center">
+        <footer className="mt-16 pt-8 text-center border-t border-slate-200">
           <p className="text-slate-400 text-sm">
             Ready to build this?{" "}
             <a 
@@ -87,7 +87,7 @@ export default function TemplatePage({ params }: { params: Promise<{ tool: strin
               className="text-blue-600 font-bold hover:underline"
               target="_blank" 
             >
-              Get your {data.toolName} account here &rarr;
+              Get your {data.toolName}{" "}account here &rarr;
             </a>
           </p>
         </footer>
