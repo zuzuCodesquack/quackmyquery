@@ -14,19 +14,19 @@ export default function Home() {
         
         <h2 className="text-sm font-black text-slate-400 mb-6 uppercase tracking-[0.2em]">Browse By Tool</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-16">
-           <Link href="/blueprints" className="bg-white hover:bg-orange-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-orange-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
+           <Link href="/blueprints?tool=zapier" className="bg-white hover:bg-orange-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-orange-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
               <span className="text-4xl group-hover:scale-125 transition-transform duration-300 drop-shadow-sm">⚡</span>
               <span className="font-bold text-slate-700 tracking-tight">Zapier</span>
            </Link>
-           <Link href="/blueprints" className="bg-white hover:bg-purple-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-purple-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
+           <Link href="/blueprints?tool=make" className="bg-white hover:bg-purple-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-purple-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
               <span className="text-4xl group-hover:scale-125 transition-transform duration-300 drop-shadow-sm">⚙️</span>
               <span className="font-bold text-slate-700 tracking-tight">Make.com</span>
            </Link>
-           <Link href="/blueprints" className="bg-white hover:bg-pink-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-pink-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
+           <Link href="/blueprints?tool=clickup" className="bg-white hover:bg-pink-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-pink-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
               <span className="text-4xl group-hover:scale-125 transition-transform duration-300 drop-shadow-sm">🔺</span>
               <span className="font-bold text-slate-700 tracking-tight">ClickUp</span>
            </Link>
-           <Link href="/blueprints" className="bg-white hover:bg-blue-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-blue-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
+           <Link href="/blueprints?tool=airtable" className="bg-white hover:bg-blue-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-blue-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
               <span className="text-4xl group-hover:scale-125 transition-transform duration-300 drop-shadow-sm">📊</span>
               <span className="font-bold text-slate-700 tracking-tight">Airtable</span>
            </Link>
