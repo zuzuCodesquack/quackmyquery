@@ -12,7 +12,11 @@
       "🗂️ Action: Create a 'Follow-up' task in your CRM with the lead's phone number attached."
     ],
     "copyPasteElement": "Trigger: Facebook Lead Ads -> Action: Filter (Only if Phone exists) -> Action: SMS by Zapier -> Action: HubSpot (Create Task)",
-    "affiliateLink": "https://zapier.com"
+    "affiliateLink": "https://zapier.com",
+    "businessValue": [
+      "You know that sinking feeling when a hot lead drops from a Zillow or Facebook ad, but you're caught up in a showing or driving across town? By the time you get back to your desk to manually punch their info into your CRM and type out a text, they've already moved on to the next agent. That lag time is literally costing you commissions.",
+      "That's where Zapier steps in as your ruthless, invisible assistant. The second someone fills out your form, it grabs their phone number, drops it instantly into your CRM, and fires off a friendly text from your Twilio number. You're booking intro calls on autopilot while you're still handing over the keys to your previous client."
+    ]
   },
   {
     "toolSlug": "make-com",
@@ -27,7 +31,11 @@
       "🚨 Action: Send a high-priority Slack message or Email to the fulfillment team with the SKU and a direct link to the restock order page."
     ],
     "copyPasteElement": "Shopify: Watch Inventory -> Tool: Numeric Aggregator -> Slack: Post Message (High Priority)",
-    "affiliateLink": "https://make.com"
+    "affiliateLink": "https://make.com",
+    "businessValue": [
+      "Running out of inventory in the middle of a massive traffic spike is a nightmare. You're left constantly refreshing Shopify to check stock levels, terrified that you're selling products you don't even have sitting in the warehouse. It turns what should be a profitable sales day into an anxiety-inducing data-entry scramble.",
+      "Think of Make.com as your relentless floor manager. It constantly watches your Shopify data, and the absolute millisecond any product dips below your chosen threshold, it sounds the alarm. It fires a targeted message right to your fulfillment team's Slack or inbox, letting them know exactly what to restock before your customers even realize it."
+    ]
   },
   {
     "toolSlug": "clickup",
@@ -42,7 +50,11 @@
       "📅 Set relative due dates (e.g., 'Kickoff Call' is always 3 days after the list is created)."
     ],
     "copyPasteElement": "Trigger: Task Created -> Action: Apply Template (Onboarding V2) -> Action: Assign to Account Manager",
-    "affiliateLink": "https://clickup.com"
+    "affiliateLink": "https://clickup.com",
+    "businessValue": [
+      "Onboarding a new client should be an exciting moment, but instead, it usually means hours of clicking around, creating the same exact folders, tracking down contract files, and manually assigning kickoff tasks to your team. It's a massive drag on momentum and leaves a wide-open door for someone to forget a crucial step.",
+      "With ClickUp's automations, you're basically cloning your best project manager. The moment you flip a client to 'Active' in your CRM, the system instantly spins up the entire workflow structure. It drops in your master templates, schedules due dates automatically, and tags the right team members so you can get straight to the real work."
+    ]
   },
   {
     "toolSlug": "airtable",
@@ -57,7 +69,11 @@
       "💻 Use an 'Interface' to show the client a visual progress bar of their spending."
     ],
     "copyPasteElement": "IF({Actual Cost} > {Projected Cost}, '⚠️ Over Budget', '✅ ' & ROUND(({Projected Cost}-{Actual Cost})/{Projected Cost}*100) & '% Remaining')",
-    "affiliateLink": "https://airtable.com"
+    "affiliateLink": "https://airtable.com",
+    "businessValue": [
+      "It’s dangerously easy to blow a client’s exact event budget when you're managing multiple vendors, deposits, and last-minute floral changes across three different fragmented spreadsheets. You waste hours manually cross-referencing receipts just to figure out if you actually have room left in the budget for that extra lighting rig.",
+      "Airtable completely fixes that by behaving like a custom-built financial watchdog. Instead of doing the math yourself, the system constantly tracks real-time vendor costs strictly against the initial projections. It automatically flags anything inching into the red and spits out a clean, visual progress bar you can confidently show your clients."
+    ]
   },
   {
     "toolSlug": "make-com",
@@ -72,7 +88,11 @@
       "📧 Filter: If 'Module Completed' is still false, trigger a personalized 'Checking In' email via Mailchimp/ConvertKit."
     ],
     "copyPasteElement": "Kajabi: Watch Event -> Tool: Sleep (2 Days) -> Kajabi: Get Enrollment -> Gmail: Send nudge if incomplete",
-    "affiliateLink": "https://make.com"
+    "affiliateLink": "https://make.com",
+    "businessValue": [
+      "You put your heart into recording course modules, but it's incredibly frustrating when students simply forget to log back in and finish the programs they paid for. Trying to manually audit student progress in Kajabi and send individual follow-up nudges to every straggler is practically a full-time job.",
+      "By plugging Make.com into the equation, you get an invisible retention officer working around the clock. It actively tracks exactly when someone starts a lesson, waits patiently in the background, and if they haven't finished after a couple of days, it automatically shoots them a personalized Mailchimp email to pull them back in."
+    ]
   },
   {
     "toolSlug": "make-com",
@@ -87,7 +107,11 @@
       "📱 Action: Automatically send a Twilio SMS to affected clients offering a link to reschedule."
     ],
     "copyPasteElement": "Weather API (Rain > 60%) -> Google Calendar (Find Events) -> Twilio (Send SMS)",
-    "affiliateLink": "https://make.com"
+    "affiliateLink": "https://make.com",
+    "businessValue": [
+      "There's nothing worse than waking up to a sudden torrential downpour and realizing you have a dozen outdoor jobs scheduled for the day. You end up spending your entire morning frantically dialing clients, apologizing, and trying to manually reshuffle everyone's appointments on a messy Google Calendar.",
+      "Make.com completely removes that headache by acting as your proactive dispatcher. It taps directly into real-time weather APIs, and if it sees foul weather rolling in tomorrow, it automatically scans your schedule, identifies the affected jobs, and texts your clients directly to offer a clean link to reschedule."
+    ]
   },
   {
     "toolSlug": "clickup",
@@ -102,7 +126,11 @@
       "💬 Action: Tag the accountant or bookkeeper in a comment so they see it instantly."
     ],
     "copyPasteElement": "Trigger: Status is To Pay AND past Due Date -> Action: Change to Overdue -> Action: Add Comment (@Accountant)",
-    "affiliateLink": "https://clickup.com"
+    "affiliateLink": "https://clickup.com",
+    "businessValue": [
+      "It's terrifying how quickly a pile of pending vendor invoices can tank your cash flow if you aren't paying close attention. You're relying on your memory or a sticky note to remember exactly when things are due, and by the time you realize an invoice slipped through the cracks, you're hit with painful late fees.",
+      "ClickUp's workflow automations act like an eagle-eyed accounts payable clerk. The exact moment an invoice passes its due date, the system forcefully shifts it to 'Overdue' and instantly screams at your bookkeeper with a direct tag in the comment section. Nothing goes unpaid or unnoticed ever again."
+    ]
   },
   {
     "toolSlug": "zapier",
@@ -117,7 +145,11 @@
       "📧 Action: Send a personalized email via Klaviyo asking for a photo review in exchange for a 15% discount."
     ],
     "copyPasteElement": "Shopify (Order Fulfilled) -> Delay by Zapier (14 Days) -> Klaviyo (Send Campaign Email)",
-    "affiliateLink": "https://zapier.com"
+    "affiliateLink": "https://zapier.com",
+    "businessValue": [
+      "Every physical product you sell without collecting a positive photo review is money left completely on the table. But expecting your team to manually track exactly when a customer received a package and remember to email them precisely two weeks later is totally unsustainable at scale.",
+      "Zapier handles this beautifully by becoming your dedicated review chaser. It watches the exact moment Shopify tags an order as fulfilled, patiently clocks two full weeks in the background, and then triggers a highly customized Klaviyo email. It automatically trades a sweet discount code for powerful user-generated content without you lifting a finger."
+    ]
   },
   {
     "toolSlug": "airtable",
@@ -132,6 +164,10 @@
       "🗂️ Create a linked table for 'Brand Contacts' so you never lose a PR rep's email address."
     ],
     "copyPasteElement": "IF({Payment Status} = 'Unpaid', DATETIME_DIFF(TODAY(), {Invoice Sent Date}, 'days') & ' Days Overdue', 'Paid')",
-    "affiliateLink": "https://airtable.com"
+    "affiliateLink": "https://airtable.com",
+    "businessValue": [
+      "Juggling multiple brand deals, chasing down unpaid invoices, and trying to remember if you actually filmed the B-roll deliverable due yesterday is a massive headache. When you run your entire creator business out of a tangled mess of spreadsheets, it's only a matter of time before you piss off a major sponsor or lose track of a payment.",
+      "Airtable acts as your dedicated talent manager, automatically holding everything tightly together. It dynamically groups your massive deals by payment status, calculates exactly how many days a brand is overdue, and links everything perfectly to your PR contacts list so you always know exactly who to email to demand the check."
+    ]
   }
 ]

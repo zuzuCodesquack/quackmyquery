@@ -2,7 +2,6 @@ import pageData from '@/data/templates.json';
 import CopyButton from '@/app/components/CopyButton';
 import Link from 'next/link';
 
-// 1. Tell Next.js to build these pages at compile time (Super fast SEO)
 export async function generateStaticParams() {
   return pageData.map((page) => ({
     tool: page.toolSlug,
@@ -16,22 +15,38 @@ type Props = {
 
 export const dynamicParams = false;
 
-// 2. Build the actual visual page
+// Sub-Component securely mapping the new generated Value Proposition block!
+function ValueProposition({ paragraphs }: { paragraphs: string[] }) {
+  if (!paragraphs || paragraphs.length !== 2) return null;
+  return (
+    <section className="mt-16 bg-blue-50/50 p-8 sm:p-10 rounded-3xl border border-blue-100">
+      <h2 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+        <span>💡</span> Why This Actually Matters
+      </h2>
+      <div className="space-y-6">
+        <p className="text-lg text-slate-700 leading-relaxed font-medium">
+          {paragraphs[0]}
+        </p>
+        <p className="text-lg text-slate-700 leading-relaxed font-medium">
+          {paragraphs[1]}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default async function TemplatePage({ params }: Props) {
-  // Await params in Next.js 15+ 
   const { tool, profession } = await params;
 
-  // Find the right data block for the current URL
   const data = pageData.find(
     (p) => p.toolSlug === tool && p.professionSlug === profession
   );
 
   if (!data) return <div className="text-center py-20 text-xl font-medium text-slate-700">Template not found</div>;
 
-  // Find related blueprints based on the same tool
   const relatedBlueprints = pageData
     .filter((p) => p.toolSlug === data.toolSlug && p.professionSlug !== data.professionSlug)
-    .slice(0, 3); // Grab 2-3 links
+    .slice(0, 3);
 
   return (
     <div className="min-h-screen bg-slate-50 py-10 px-4 sm:px-6 lg:px-8 font-sans">
@@ -47,8 +62,11 @@ export default async function TemplatePage({ params }: Props) {
         </h1>
         <p className="text-slate-600 mt-6 text-xl leading-relaxed">{data.coreProblem}</p>
 
+        {/* Business Value Section dynamically implemented! */}
+        <ValueProposition paragraphs={data.businessValue} />
+
         {/* Blueprint Steps */}
-        <section className="mt-12 bg-slate-50 p-8 rounded-2xl border border-slate-100">
+        <section className="mt-16 bg-slate-50 p-8 rounded-2xl border border-slate-100">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">The Blueprint</h2>
           <ul className="space-y-5 text-lg">
             {data.blueprintSteps.map((step, index) => (
