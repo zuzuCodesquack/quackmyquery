@@ -81,7 +81,7 @@ export default async function TemplatePage({ params }: Props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get your {data.toolName} account &rarr;
+              Get your {data.toolName}{" "}account &rarr;
             </a>
           </div>
 

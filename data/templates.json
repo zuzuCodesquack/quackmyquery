@@ -27,7 +27,7 @@
       "🚨 Action: Send a high-priority Slack message or Email to the fulfillment team with the SKU and a direct link to the restock order page."
     ],
     "copyPasteElement": "Shopify: Watch Inventory -> Tool: Numeric Aggregator -> Slack: Post Message (High Priority)",
-    "affiliateLink": "https://www.make.com/en/register?pc=quack"
+    "affiliateLink": "https://make.com"
   },
   {
     "toolSlug": "clickup",
@@ -42,7 +42,7 @@
       "📅 Set relative due dates (e.g., 'Kickoff Call' is always 3 days after the list is created)."
     ],
     "copyPasteElement": "Trigger: Task Created -> Action: Apply Template (Onboarding V2) -> Action: Assign to Account Manager",
-    "affiliateLink": "https://clickup.com/?fp_ref=quack"
+    "affiliateLink": "https://clickup.com"
   },
   {
     "toolSlug": "airtable",
@@ -57,7 +57,7 @@
       "💻 Use an 'Interface' to show the client a visual progress bar of their spending."
     ],
     "copyPasteElement": "IF({Actual Cost} > {Projected Cost}, '⚠️ Over Budget', '✅ ' & ROUND(({Projected Cost}-{Actual Cost})/{Projected Cost}*100) & '% Remaining')",
-    "affiliateLink": "https://airtable.com/invite/quack"
+    "affiliateLink": "https://airtable.com"
   },
   {
     "toolSlug": "make-com",
@@ -72,7 +72,7 @@
       "📧 Filter: If 'Module Completed' is still false, trigger a personalized 'Checking In' email via Mailchimp/ConvertKit."
     ],
     "copyPasteElement": "Kajabi: Watch Event -> Tool: Sleep (2 Days) -> Kajabi: Get Enrollment -> Gmail: Send nudge if incomplete",
-    "affiliateLink": "https://www.make.com/en/register?pc=quack"
+    "affiliateLink": "https://make.com"
   },
   {
     "toolSlug": "make-com",
@@ -87,7 +87,7 @@
       "📱 Action: Automatically send a Twilio SMS to affected clients offering a link to reschedule."
     ],
     "copyPasteElement": "Weather API (Rain > 60%) -> Google Calendar (Find Events) -> Twilio (Send SMS)",
-    "affiliateLink": "https://www.make.com/en/register?pc=quack"
+    "affiliateLink": "https://make.com"
   },
   {
     "toolSlug": "clickup",
@@ -102,7 +102,7 @@
       "💬 Action: Tag the accountant or bookkeeper in a comment so they see it instantly."
     ],
     "copyPasteElement": "Trigger: Status is To Pay AND past Due Date -> Action: Change to Overdue -> Action: Add Comment (@Accountant)",
-    "affiliateLink": "https://clickup.com/?fp_ref=quack"
+    "affiliateLink": "https://clickup.com"
   },
   {
     "toolSlug": "zapier",
@@ -132,6 +132,6 @@
       "🗂️ Create a linked table for 'Brand Contacts' so you never lose a PR rep's email address."
     ],
     "copyPasteElement": "IF({Payment Status} = 'Unpaid', DATETIME_DIFF(TODAY(), {Invoice Sent Date}, 'days') & ' Days Overdue', 'Paid')",
-    "affiliateLink": "https://airtable.com/invite/quack"
+    "affiliateLink": "https://airtable.com"
   }
 ]
