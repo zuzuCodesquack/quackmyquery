@@ -28,11 +28,16 @@ export default async function TemplatePage({ params }: Props) {
 
   if (!data) return <div className="text-center py-20 text-xl font-medium text-slate-700">Template not found</div>;
 
+  // Find related blueprints based on the same tool
+  const relatedBlueprints = pageData
+    .filter((p) => p.toolSlug === data.toolSlug && p.professionSlug !== data.professionSlug)
+    .slice(0, 3); // Grab 2-3 links
+
   return (
     <div className="min-h-screen bg-slate-50 py-10 px-4 sm:px-6 lg:px-8 font-sans">
       <main className="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-200">
         <div className="mb-8">
-          <Link href="/" className="text-blue-600 font-semibold hover:text-blue-800 transition-colors inline-flex items-center">
+          <Link href="/blueprints" className="text-blue-600 font-semibold hover:text-blue-800 transition-colors inline-flex items-center">
             &larr; Back to Directory
           </Link>
         </div>
@@ -71,7 +76,7 @@ export default async function TemplatePage({ params }: Props) {
 
         {/* Affiliate Link & Legal Footer */}
         <footer className="mt-20 pt-10 border-t border-slate-200">
-          <div className="text-center mb-10">
+          <div className="text-center mb-16">
             <p className="text-xl font-bold text-slate-800 mb-6">
               Ready to start building?
             </p>
@@ -84,6 +89,24 @@ export default async function TemplatePage({ params }: Props) {
               Get your {data.toolName}{" "}account &rarr;
             </a>
           </div>
+
+          {/* Internal Linking SEO Block */}
+          {relatedBlueprints.length > 0 && (
+            <div className="mb-16 bg-slate-50 p-8 rounded-2xl border border-slate-100">
+              <h4 className="text-lg font-bold text-slate-800 mb-4">
+                Explore More {data.toolName} Blueprints
+              </h4>
+              <ul className="space-y-3">
+                {relatedBlueprints.map((template, idx) => (
+                  <li key={idx}>
+                     <Link href={`/${template.toolSlug}/${template.professionSlug}`} className="text-blue-600 hover:underline font-medium">
+                       &rarr; {template.toolName} for {template.professionName}
+                     </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="max-w-2xl mx-auto text-xs text-slate-500 space-y-4 text-center bg-slate-50 p-6 rounded-xl border border-slate-100">
             <p>

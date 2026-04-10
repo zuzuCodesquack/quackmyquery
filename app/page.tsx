@@ -1,45 +1,38 @@
-'use client';
-import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import React from 'react';
 import Link from 'next/link';
 
 export default function Home() {
-  const [query, setQuery] = useState('');
-  const router = useRouter();
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim()) {
-      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
-    }
-  };
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-slate-800 font-sans p-6">
-      <div className="max-w-3xl w-full px-6 text-center">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-slate-800 font-sans p-6 overflow-hidden">
+      <div className="max-w-4xl w-full px-6 text-center">
         <div className="text-8xl mb-6 select-none animate-bounce-slow">🦆</div>
-        <h1 className="text-5xl font-extrabold tracking-tight mb-4 text-slate-900">Quack My Query</h1>
-        <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-          Your friendly assistant for finding the exact prices, specs, and local data you need.
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">Quack My Query</h1>
+        <p className="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
+          Your friendly assistant for data and automation. Browse our premium library of ready-to-use blueprints to hyper-charge your business systems instantly.
         </p>
-        <form onSubmit={handleSearch} className="flex items-center bg-white rounded-full shadow-md hover:shadow-lg focus-within:shadow-lg focus-within:ring-2 focus-within:ring-blue-500/20 transition-all duration-200 overflow-hidden max-w-2xl mx-auto mb-8 border border-gray-200 group">
-          <div className="pl-5 flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-          <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search for anything..." className="flex-grow pl-3 pr-4 py-4 focus:outline-none text-lg text-slate-700 placeholder-gray-400 min-w-0" autoFocus />
-          <button type="submit" className="bg-blue-600 text-white px-8 py-4 font-semibold hover:bg-blue-700 active:bg-blue-800 transition-colors duration-200 whitespace-nowrap">Search</button>
-        </form>
-        <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-500 mb-8">
-          <button onClick={() => setQuery('Local pricing')} className="hover:text-blue-600 transition">Local pricing</button>
-          <button onClick={() => setQuery('Product specs')} className="hover:text-blue-600 transition">Product specs</button>
-          <button onClick={() => setQuery('City data')} className="hover:text-blue-600 transition">City data</button>
-          <button onClick={() => setQuery('Market trends')} className="hover:text-blue-600 transition">Market trends</button>
+        
+        <h2 className="text-sm font-black text-slate-400 mb-6 uppercase tracking-[0.2em]">Browse By Tool</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-16">
+           <Link href="/blueprints" className="bg-white hover:bg-orange-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-orange-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
+              <span className="text-4xl group-hover:scale-125 transition-transform duration-300 drop-shadow-sm">⚡</span>
+              <span className="font-bold text-slate-700 tracking-tight">Zapier</span>
+           </Link>
+           <Link href="/blueprints" className="bg-white hover:bg-purple-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-purple-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
+              <span className="text-4xl group-hover:scale-125 transition-transform duration-300 drop-shadow-sm">⚙️</span>
+              <span className="font-bold text-slate-700 tracking-tight">Make.com</span>
+           </Link>
+           <Link href="/blueprints" className="bg-white hover:bg-pink-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-pink-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
+              <span className="text-4xl group-hover:scale-125 transition-transform duration-300 drop-shadow-sm">🔺</span>
+              <span className="font-bold text-slate-700 tracking-tight">ClickUp</span>
+           </Link>
+           <Link href="/blueprints" className="bg-white hover:bg-blue-50/50 border border-slate-200 shadow-sm hover:shadow-lg hover:border-blue-200 p-8 rounded-3xl flex flex-col items-center gap-4 transition-all duration-300 group">
+              <span className="text-4xl group-hover:scale-125 transition-transform duration-300 drop-shadow-sm">📊</span>
+              <span className="font-bold text-slate-700 tracking-tight">Airtable</span>
+           </Link>
         </div>
-        <div className="text-xs text-slate-400 mt-8 tracking-widest font-bold uppercase">
-          LAUNCHING SOON • YOUR DATA, SIMPLIFIED
-        </div>
-        <Link href="/blueprints" className="mt-6 inline-block text-slate-400 hover:text-blue-600 underline text-[10px] uppercase tracking-tighter">
-          Blueprint Directory
+
+        <Link href="/blueprints" className="inline-block bg-slate-900 text-white px-10 py-5 rounded-full font-bold shadow-xl hover:bg-blue-600 hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300 tracking-wide">
+          View Complete Directory &rarr;
         </Link>
       </div>
       <style jsx global>{`
