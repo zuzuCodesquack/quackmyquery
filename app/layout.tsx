@@ -1,4 +1,14 @@
 import type { Metadata } from "next";
+
+// This is the part you are updating
+export const metadata: Metadata = {
+  metadataBase: new URL('https://quackmyquery.com'),
+  title: "Quack My Query",
+  description: "Automation blueprints for your profession.",
+  alternates: {
+    canonical: '/',
+  },
+};
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
