@@ -84,7 +84,7 @@ export default async function TemplatePage({ params }: Props) {
              <span className="bg-green-500/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Ready to Use</span>
           </div>
           <p className="text-slate-400 text-sm mb-6 font-medium">Copy the exact formula below and paste it into {data.toolName}:</p>
-          <code className="block p-5 bg-slate-950 text-green-400 rounded-xl font-mono text-sm leading-relaxed shadow-inner break-words border border-slate-800/50">
+          <code className="block p-5 bg-slate-950 text-green-400 rounded-xl font-mono text-sm leading-relaxed shadow-inner break-words whitespace-pre-wrap border border-slate-800/50">
             {data.copyPasteElement}
           </code>
           <div className="mt-6 flex justify-end">
