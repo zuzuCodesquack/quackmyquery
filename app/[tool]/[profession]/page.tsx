@@ -92,6 +92,32 @@ export default async function TemplatePage({ params }: Props) {
           </div>
         </div>
 
+        {/* Actionable Toolkit: Setup Guide */}
+        {data.implementation_guide && data.implementation_guide.length > 0 && (
+          <section className="mt-16 bg-white p-8 sm:p-10 rounded-3xl border border-blue-200 shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-2 h-full bg-blue-600"></div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
+              <span>🛠️</span> Actionable Toolkit: Setup Guide
+            </h2>
+            <p className="text-slate-500 mb-6 font-medium">Follow these exact steps to implement this blueprint in {data.toolName}:</p>
+            <div className="space-y-4">
+              {data.implementation_guide.map((step, index) => {
+                const cleanStep = step.replace(/^\d+\.\s*/, '');
+                return (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </div>
+                    <p className="text-lg text-slate-700 leading-relaxed pt-1">
+                      {cleanStep}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
         {/* Affiliate Link & Legal Footer */}
         <footer className="mt-20 pt-10 border-t border-slate-200">
           <div className="text-center mb-16">

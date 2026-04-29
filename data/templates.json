@@ -16,6 +16,12 @@
     "businessValue": [
       "You know the drill. A hot lead finally hits your Facebook ad or Zillow profile, but you're in the middle of a showing or battling traffic to get across town. By the time you get back to your laptop to manually log their info and send a text, they've already called three other agents. That ridiculous lag time is literally eating your commission checks.",
       "Enter Zapier. Think of it as a ruthless assistant that never sleeps. The exact second that form gets submitted, it grabs the lead's number, drops it instantly into your CRM, and shoots off a friendly text from your Twilio number. You're suddenly booking intro calls on complete autopilot while you're still handing over the keys to your last client."
+    ],
+    "implementation_guide": [
+      "1. Open Zapier and click 'Create Zap'.",
+      "2. Connect your Facebook Lead Ads account and set the trigger to 'New Lead'.",
+      "3. Add a Twilio action to send an SMS, mapping the lead's first name into your template.",
+      "4. Test the Zap and turn it on to start responding instantly."
     ]
   },
   {
@@ -35,6 +41,12 @@
     "businessValue": [
       "Running out of stock in the middle of a massive traffic spike is a nightmare. You end up constantly refreshing Shopify to check inventory levels, terrified that you're selling products that aren't even sitting in the warehouse anymore. It turns what should be a wildly profitable launch day into an anxiety-inducing scramble just to keep your data accurate.",
       "Make.com essentially acts as your relentless floor manager. It constantly watches your Shopify data, and the absolute millisecond any product dips below your danger threshold, it sounds the alarm. It fires a targeted alert straight to your fulfillment team's Slack, letting them know exactly what to restock long before your customers even notice."
+    ],
+    "implementation_guide": [
+      "1. Log into Make.com and create a new scenario.",
+      "2. Add the Shopify 'Watch Inventory' module.",
+      "3. Set up a filter between modules to only proceed if the inventory count drops below 10.",
+      "4. Connect your Slack workspace and format the warning message."
     ]
   },
   {
@@ -54,6 +66,12 @@
     "businessValue": [
       "Onboarding a high-value client should be a cause for celebration. Instead, it usually means hours of clicking through menus, creating the exact same folders, tracking down contract files, and manually assigning kickoff tasks to your team. It's a massive drag on everybody's momentum and leaves a wide-open door for someone to inevitably forget a crucial step.",
       "With ClickUp's automations, you're basically cloning your best project manager. The moment you flip a client's status to 'Active' in your CRM, the system instantly spins up the entire workflow structure in the background. It drops in your master templates, schedules the initial due dates, and tags the right team members so you can get straight to the real work."
+    ],
+    "implementation_guide": [
+      "1. Open your ClickUp Workspace and create a 'Master Onboarding' List Template.",
+      "2. Go to 'Automations' in your CRM folder and create a new rule.",
+      "3. Set the trigger to 'Status Changes' to 'Active'.",
+      "4. Choose 'Apply Template' as the action and select your Master Onboarding template."
     ]
   },
   {
@@ -73,6 +91,12 @@
     "businessValue": [
       "It’s dangerously easy to completely blow a client’s exact budget when you're managing multiple vendors, heavy deposits, and last-minute floral changes across three different fragmented spreadsheets. You waste hours just manually cross-referencing receipts to figure out if you actually have enough room left for that extra lighting rig.",
       "Airtable completely fixes that mess by behaving like a custom-built financial watchdog. Instead of you doing the math, the system constantly tracks real-time vendor costs dead-against the initial projections. It automatically flags anything inching into the red and spits out a clean, visual progress bar you can confidently hand to your clients."
+    ],
+    "implementation_guide": [
+      "1. Create a new Airtable base for 'Budget Tracking'.",
+      "2. Add 'Projected Cost' and 'Actual Cost' columns configured as Currency.",
+      "3. Insert a Formula field and paste the provided variance calculation.",
+      "4. Build an Interface dashboard to visually share the remaining budget with your clients."
     ]
   },
   {
@@ -92,6 +116,12 @@
     "businessValue": [
       "You pour your absolute heart into recording these course modules, but it's incredibly frustrating when students simply forget to log back in and finish the programs they paid for. Trying to manually audit student progress in Kajabi and send individual follow-up nudges to every single straggler is practically a full-time job.",
       "By plugging Make.com into the equation, you get an invisible retention officer working around the clock. It actively tracks exactly when someone starts a lesson, waits patiently in the background, and if they haven't finished after a couple of days, it automatically shoots them a highly personalized Mailchimp email to pull them back in."
+    ],
+    "implementation_guide": [
+      "1. In Make.com, set up a webhook or direct integration with Kajabi/Teachable to watch for 'Module Started'.",
+      "2. Add the 'Sleep' tool module and set it to wait for 48 hours.",
+      "3. Add a module to fetch the current progress of that specific student.",
+      "4. Use a filter to check if 'Completed' is false, then connect Gmail/Mailchimp to send the nudge."
     ]
   },
   {
@@ -111,6 +141,12 @@
     "businessValue": [
       "There's nothing quite like waking up to a sudden torrential downpour and realizing you have a dozen outdoor jobs scheduled for the day. You end up spending your entire morning frantically dialing clients, apologizing endlessly, and trying to manually reshuffle everyone's appointments on a messy Google Calendar.",
       "Make.com completely removes that headache by acting as your proactive dispatcher. It taps directly into real-time weather APIs, and if it sees foul weather rolling in tomorrow, it automatically scans your schedule, identifies the affected jobs, and texts your clients directly to offer a clean link to effortlessly reschedule."
+    ],
+    "implementation_guide": [
+      "1. Create a Make.com scenario starting with a Weather API module (like OpenWeatherMap).",
+      "2. Configure the weather trigger to fire if tomorrow's rain probability exceeds 60%.",
+      "3. Connect your Google Calendar to search for events tagged as 'Outdoor' for tomorrow.",
+      "4. Add the Twilio module to SMS the clients found in the calendar search with a reschedule link."
     ]
   },
   {
@@ -130,6 +166,12 @@
     "businessValue": [
       "It's terrifying how quickly a pile of pending vendor invoices can tank your actual cash flow if you aren't paying close attention. You're relying entirely on your memory or a physical sticky note to remember exactly when things are due, and by the time you realize an invoice slipped through the cracks, you're hit with painful late fees.",
       "ClickUp's workflow automations act like an eagle-eyed accounts payable clerk. The exact moment an invoice passes its due date, the system forcefully shifts it over to 'Overdue' and instantly screams at your bookkeeper with a direct tag in the comment section. Nothing goes unpaid or unnoticed ever again."
+    ],
+    "implementation_guide": [
+      "1. Open your Finance Space in ClickUp.",
+      "2. Click on 'Automations' at the top right of your board.",
+      "3. Set the trigger: 'When Task arrives in To Pay' AND 'Due Date arrives'.",
+      "4. Set the action to 'Change Status to Overdue' and 'Add a Comment' tagging @accountant."
     ]
   },
   {
@@ -149,6 +191,12 @@
     "businessValue": [
       "Every physical product you sell without collecting a positive photo review is money left completely on the table. But expecting your team to manually track exactly when a customer received a package and remember to email them precisely two weeks later is totally unsustainable at scale.",
       "Zapier handles this beautifully by becoming your totally dedicated review chaser. It watches the exact moment Shopify tags an order as fulfilled, patiently clocks two full weeks in the background, and then triggers a highly customized Klaviyo email. It automatically trades a sweet discount code for powerful user-generated content without you having to lift a finger."
+    ],
+    "implementation_guide": [
+      "1. In Zapier, select Shopify as your trigger app and choose 'Order Fulfilled'.",
+      "2. Add the 'Delay by Zapier' action and set it to delay for exactly 14 days.",
+      "3. Connect your Klaviyo account as the final action.",
+      "4. Map the customer's email address and select your 'Photo Review Request' campaign template."
     ]
   },
   {
@@ -168,6 +216,387 @@
     "businessValue": [
       "Juggling multiple brand deals, chasing down unpaid invoices, and trying to remember if you actually filmed the B-roll deliverable due yesterday is just a massive headache. When you run your entire creator business out of a tangled mess of spreadsheets, it's only a matter of time before you piss off a major sponsor or lose track of a heavy payment.",
       "Airtable acts as your dedicated talent manager, automatically holding everything tightly together. It dynamically groups your massive deals by payment status, calculates exactly how many days a brand is overdue, and links everything perfectly to your PR contacts list so you always know exactly who you need to email to demand the check."
+    ],
+    "implementation_guide": [
+      "1. Open your Airtable Brand Deals base.",
+      "2. Create a new Grid View specifically grouped by the 'Payment Status' field.",
+      "3. Add the provided formula into a new Formula field to calculate days overdue.",
+      "4. Create a linked record field connecting each deal to your 'Brand Contacts' table."
+    ]
+  },
+  {
+    "toolSlug": "zapier",
+    "professionSlug": "septic-tank-service",
+    "toolName": "Zapier",
+    "professionName": "Septic Tank Service",
+    "coreProblem": "Field techs are taking photos of damaged baffles, but those photos are getting lost in group texts instead of attached to the customer's final invoice.",
+    "utilityName": "The Field-to-Invoice Bridge",
+    "blueprintSteps": [
+      "📸 Trigger: New photo uploaded to a specific Google Drive or Dropbox folder by the field tech.",
+      "🔍 Action: Extract the customer name from the folder title.",
+      "📝 Action: Attach the photo directly to the corresponding drafted invoice in QuickBooks Online."
+    ],
+    "copyPasteElement": "Trigger: Google Drive (New File in Folder) -> Action: Formatter by Zapier (Extract Text) -> Action: QuickBooks (Attach to Invoice)",
+    "affiliateLink": "https://zapier.com",
+    "businessValue": [
+      "When a field tech finds a cracked baffle or root intrusion, photographic proof is the only way to justify an expensive repair to the homeowner. But if those photos are just floating around in messy text threads, your office staff wastes hours tracking them down when it's time to bill.",
+      "Zapier builds an invisible bridge between the dirt and the desk. The moment a tech snaps a photo and drops it in the customer's job folder, Zapier grabs it, reads the name, and permanently staples that photo to the QuickBooks invoice. The customer sees exactly what they're paying for, and you get paid faster without the administrative chaos."
+    ],
+    "implementation_guide": [
+      "1. Open Zapier and click 'Create Zap'.",
+      "2. Set Google Drive as the trigger, specifically monitoring your 'Field Photos' folder.",
+      "3. Use the Zapier Formatter tool to extract the client's name or job ID from the folder path.",
+      "4. Connect QuickBooks Online and map the image file directly to the 'Attach to Invoice' action."
+    ]
+  },
+  {
+    "toolSlug": "make-com",
+    "professionSlug": "pothole-repair",
+    "toolName": "Make.com",
+    "professionName": "Pothole Repair",
+    "coreProblem": "You rely on municipalities reporting potholes, but tracking those specific geographic coordinates and dispatching the closest crew is a manual nightmare.",
+    "utilityName": "The Geo-Dispatcher",
+    "blueprintSteps": [
+      "📍 Trigger: New pothole repair request submitted via Webflow form with GPS coordinates.",
+      "🗺️ Action: Calculate distance to your three active field crews using Google Maps API.",
+      "📱 Action: Send a Telegram alert to the closest crew with a one-tap navigation link."
+    ],
+    "copyPasteElement": "Webhook (Receive form) -> HTTP Request (Google Maps API Distance Matrix) -> Telegram (Send Message with Coordinates)",
+    "affiliateLink": "https://make.com",
+    "businessValue": [
+      "Pothole repair is entirely a game of routing efficiency. If you're sending a crew across town to patch a hole while another crew is literally two blocks away, you're burning through expensive asphalt and diesel fuel for absolutely no reason.",
+      "Make.com acts as an automated logistics dispatcher. When a new work order drops with a location, Make immediately pings the Google Maps API, calculates which of your trucks is currently closest, and shoots a Telegram message to that specific foreman with a tap-to-navigate link. You patch more holes per day with zero extra dispatch overhead."
+    ],
+    "implementation_guide": [
+      "1. Create a new scenario in Make.com and add a Custom Webhook trigger.",
+      "2. Connect the HTTP module and authenticate with your Google Maps API key to use the Distance Matrix.",
+      "3. Set up an array iterator to evaluate the travel time for each active crew.",
+      "4. Add the Telegram module to message the foreman with the shortest travel time."
+    ]
+  },
+  {
+    "toolSlug": "clickup",
+    "professionSlug": "holiday-light-installer",
+    "toolName": "ClickUp",
+    "professionName": "Holiday Light Installer",
+    "coreProblem": "Your entire year's revenue happens in a frantic 6-week window, and tracking which houses are installed, which need takedown, and who owns their lights is pure chaos.",
+    "utilityName": "The Seasonal Sorter",
+    "blueprintSteps": [
+      "🗂️ Create a ClickUp Board grouped by 'Installation Phase' (Measuring, Installed, Takedown, Stored).",
+      "🏷️ Use Custom Fields to track 'Light Ownership' (Leased vs. Customer Owned) and 'Linear Footage'.",
+      "🤖 Automation: When status changes to 'Stored', automatically duplicate the task to next year's 'To Call' list."
+    ],
+    "copyPasteElement": "Trigger: Status changes to 'Stored' -> Action: Duplicate Task -> Action: Move to List (Next Year Prospects)",
+    "affiliateLink": "https://clickup.com",
+    "businessValue": [
+      "Holiday lighting is an insanely lucrative sprint, but if you drop the ball on a takedown or lose track of a client's custom-cut C9 bulbs in your warehouse, you ruin the relationship and lose the recurring revenue for next season.",
+      "ClickUp brings total sanity to the seasonal rush. You can instantly see every property on a visual board, know exactly how many feet of lights they need, and most importantly, when a job is finished and stored, the system automatically tees them up in next year's pipeline so you never miss a renewal call."
+    ],
+    "implementation_guide": [
+      "1. Set up a dedicated 'Holiday Season' Space in ClickUp.",
+      "2. Add Custom Fields for critical data: Linear Footage (Number), Ownership (Dropdown), and Roof Pitch (Dropdown).",
+      "3. Go to Automations and set 'Status Changes to Stored' as your trigger.",
+      "4. Configure the action to 'Duplicate Task' and move it to your 'Next Year Outreach' list."
+    ]
+  },
+  {
+    "toolSlug": "airtable",
+    "professionSlug": "mobile-notary",
+    "toolName": "Airtable",
+    "professionName": "Mobile Notary",
+    "coreProblem": "You're driving all over the county doing loan signings, but you're losing track of which title companies have actually paid your invoices 30 days later.",
+    "utilityName": "The Title Company Ledger",
+    "blueprintSteps": [
+      "📊 Create a 'Signings' table linking to a 'Title Companies' table.",
+      "💰 Add a Rollup field on the Title Company table to calculate 'Total Unpaid Invoices'.",
+      "🚨 Use a Formula field to flag any signing that is 'Unpaid' and 'Past 30 Days'."
+    ],
+    "copyPasteElement": "IF(AND({Payment Status}='Unpaid', DATETIME_DIFF(TODAY(), {Date of Signing}, 'days') > 30), '🚨 OVERDUE', 'Clear')",
+    "affiliateLink": "https://airtable.com",
+    "businessValue": [
+      "Doing the actual notary work is the easy part. The hard part is managing your accounts receivable when every single title company has a different net-30 or net-45 payment schedule. If you aren't meticulously tracking your signings, you are essentially working for free.",
+      "Airtable acts as your unblinking ledger. By linking your daily signings directly to the specific title companies, you can instantly see an aggregated view of exactly who owes you money. The formula automatically flags anything past 30 days, giving you a precise hit-list of who to call on Friday afternoons to collect your checks."
+    ],
+    "implementation_guide": [
+      "1. Create a new Airtable base with two tables: 'Signings' and 'Title Companies'.",
+      "2. Create a Linked Record field to connect each signing to the hiring Title Company.",
+      "3. Add the provided IF/AND formula to visually flag any unpaid invoice older than 30 days.",
+      "4. Use a Rollup field on the 'Title Companies' table to sum up total outstanding balances per client."
+    ]
+  },
+  {
+    "toolSlug": "make-com",
+    "professionSlug": "mobile-pet-grooming",
+    "toolName": "Make.com",
+    "professionName": "Mobile Pet Grooming",
+    "coreProblem": "You spend hours texting clients reminding them of their grooming appointments, and still suffer from expensive last-minute cancellations.",
+    "utilityName": "The No-Show Eliminator",
+    "blueprintSteps": [
+      "📅 Trigger: Watch Google Calendar for grooming appointments happening in exactly 24 hours.",
+      "💬 Action: Send an SMS via Twilio reminding them to leave the gate unlocked and secure the dog.",
+      "✅ Action: Include a specific keyword (e.g., 'Reply YES to confirm') and update the calendar color when they reply."
+    ],
+    "copyPasteElement": "Google Calendar (Search Events within 24h) -> Twilio (Send SMS) -> Webhook (Catch Reply) -> Google Calendar (Update Color to Green)",
+    "affiliateLink": "https://make.com",
+    "businessValue": [
+      "When you operate a mobile grooming van, your daily route is tightly packed. A single last-minute cancellation doesn't just lose you that appointment's revenue; it leaves you sitting idle in a neighborhood with the generator running, burning through your profit margin.",
+      "Make.com acts as a ruthless confirmation assistant. Exactly 24 hours before you pull into their driveway, it shoots the client an automated text with specific instructions. When they reply 'YES', it instantly turns their calendar block green. You wake up knowing exactly who is confirmed, and you never waste gas driving to an empty house again."
+    ],
+    "implementation_guide": [
+      "1. Build a Make.com scenario starting with 'Google Calendar - Search Events'.",
+      "2. Set the search timeframe to look exactly 24 hours into the future.",
+      "3. Connect the Twilio module to send the reminder SMS.",
+      "4. Create a second scenario with a Custom Webhook to catch Twilio replies and change the calendar event color to Green."
+    ]
+  },
+  {
+    "toolSlug": "zapier",
+    "professionSlug": "iv-hydration-nurse",
+    "toolName": "Zapier",
+    "professionName": "IV Hydration Nurse",
+    "coreProblem": "Clients want to book last-minute hangover or immunity drips, but you lose them because you can't manually verify your driving radius fast enough.",
+    "utilityName": "The Instant Triage Responder",
+    "blueprintSteps": [
+      "📝 Trigger: New booking inquiry via Typeform or Squarespace.",
+      "🗺️ Action: Check the client's zip code against your approved Google Sheets list of service areas.",
+      "📱 Action: If approved, auto-text a booking link. If out of bounds, auto-text a referral to a partner clinic."
+    ],
+    "copyPasteElement": "Typeform (New Entry) -> Google Sheets (Lookup Zip Code) -> Paths by Zapier -> Twilio (Send SMS based on Path)",
+    "affiliateLink": "https://zapier.com",
+    "businessValue": [
+      "In the mobile IV therapy business, speed is everything. When someone wakes up feeling terrible and wants a drip, they are going to book the first nurse who responds. If you have to pull over, check a map, and calculate your driving distance before replying, you've already lost the sale.",
+      "Zapier instantly triages your incoming leads. The second a request hits, it checks their zip code against your approved service area matrix. If they are in your zone, it instantly texts them a calendar link to lock in the appointment. If they are too far, it politely declines. You secure the high-intent bookings within seconds without lifting a finger."
+    ],
+    "implementation_guide": [
+      "1. Set up Zapier with Typeform (or your form builder) as the trigger.",
+      "2. Add a Google Sheets 'Lookup Spreadsheet Row' action to check their zip code.",
+      "3. Use 'Paths by Zapier' to split the automation based on whether the zip code was found.",
+      "4. Map Twilio actions in each path to send either the booking link or the polite rejection."
+    ]
+  },
+  {
+    "toolSlug": "make-com",
+    "professionSlug": "auto-glass-repair",
+    "toolName": "Make.com",
+    "professionName": "Auto Glass Repair",
+    "coreProblem": "You're constantly bouncing between insurance portals, part suppliers, and the customer just to verify if you can even get the right windshield.",
+    "utilityName": "The VIN Decoder Workflow",
+    "blueprintSteps": [
+      "🚗 Trigger: Customer submits their VIN and damage photos via your website.",
+      "🔍 Action: Pass the VIN through an API (like NHTSA) to get the exact make, model, and year.",
+      "📧 Action: Draft a pre-filled email to your local glass supplier requesting inventory for that specific vehicle."
+    ],
+    "copyPasteElement": "Webhook (Receive Form) -> HTTP Request (NHTSA VIN API) -> Gmail (Create Draft with Vehicle Details)",
+    "affiliateLink": "https://make.com",
+    "businessValue": [
+      "Quoting a windshield replacement is a massive time sink. You get a request, have to manually decode the VIN to ensure you're pricing a 2019 Honda Accord and not a 2014, and then you have to manually email your supplier to see if they even have the glass in stock. It delays the quote and kills your close rate.",
+      "Make.com completely automates the quoting preamble. The moment a customer submits their VIN, the system automatically decodes it into the exact vehicle specs and drafts a ready-to-send email to your glass supplier. You skip the tedious data entry and jump straight to pricing the job and closing the deal."
+    ],
+    "implementation_guide": [
+      "1. Add a Webhook trigger in Make.com to catch your website's quote form.",
+      "2. Use the HTTP module to make a GET request to the free NHTSA VIN decoder API.",
+      "3. Map the decoded Make, Model, and Year from the API response.",
+      "4. Connect Gmail/Outlook and use the 'Create a Draft' module, injecting the vehicle details into the email body."
+    ]
+  },
+  {
+    "toolSlug": "airtable",
+    "professionSlug": "estate-sale-liquidator",
+    "toolName": "Airtable",
+    "professionName": "Estate Sale Liquidator",
+    "coreProblem": "You have thousands of unique, un-barcoded items in a house, and tracking pricing and sold status on a legal pad leads to massive shrinkage and disputes.",
+    "utilityName": "The Digital Price Tag",
+    "blueprintSteps": [
+      "📱 Create an Airtable base for 'Inventory' with an Attachment field for photos.",
+      "🏷️ Generate an Airtable Form view to rapidly input items (Photo, Brief Name, Price) as you walk the house.",
+      "💰 Create a 'Sold' checkbox field to quickly tap on your iPad at the checkout table."
+    ],
+    "copyPasteElement": "IF({Sold} = 1, '✅ Paid', '🏷️ For Sale - $' & {Price})",
+    "affiliateLink": "https://airtable.com",
+    "businessValue": [
+      "Trying to manage the liquidation of a 4-bedroom house with a clipboard and a roll of masking tape is a recipe for disaster. Price tags fall off, buyers try to negotiate at the register, and at the end of the weekend, you have absolutely no paper trail of what actually sold versus what walked out the door.",
+      "Airtable turns your iPad into a rigorous point-of-sale system built for chaos. You can rapidly walk the house, snapping photos and logging prices into a clean database. At the checkout table, you simply search the item, tap the 'Sold' box, and immediately have a flawless, undeniable ledger to present to the family at the end of the sale."
+    ],
+    "implementation_guide": [
+      "1. Create an Airtable base with fields for Photo, Item Name, Price (Currency), and Sold (Checkbox).",
+      "2. Build a Form View and save the link on your phone's home screen for rapid data entry during staging.",
+      "3. Create a Grid View filtered to only show items where 'Sold' is empty to act as your live catalog.",
+      "4. Add the provided formula to create a highly visible status tag for the checkout desk."
+    ]
+  },
+  {
+    "toolSlug": "clickup",
+    "professionSlug": "permit-expeditor",
+    "toolName": "ClickUp",
+    "professionName": "Permit Expeditor",
+    "coreProblem": "City municipalities have wildly different approval timelines, and keeping clients updated while applications sit in a black hole is exhausting.",
+    "utilityName": "The Municipal Pipeline",
+    "blueprintSteps": [
+      "🏢 Create a ClickUp Board with lists for different cities/counties.",
+      "⏳ Use Custom Statuses like 'Drafting', 'Submitted to City', 'In Plan Check', 'RTI (Ready to Issue)'.",
+      "📧 Automation: When status changes to 'In Plan Check', automatically email the architect/client with a status update."
+    ],
+    "copyPasteElement": "Trigger: Status changes to 'In Plan Check' -> Action: Send Email (Client Custom Field) -> Message: 'Your plans have entered the city review queue...'",
+    "affiliateLink": "https://clickup.com",
+    "businessValue": [
+      "As a permit expeditor, you aren't just selling your knowledge of building codes; you are selling peace of mind to frantic developers and architects. If they have to call you to ask for a status update, you are failing at the customer service aspect of the job.",
+      "ClickUp allows you to build a transparent, automated pipeline. Instead of constantly writing repetitive status update emails, the system does it for you. The exact second you drag a project card into 'Submitted to City', ClickUp automatically fires off a reassuring email to the client. You get to focus on arguing with plan checkers, not answering 'any news?' emails."
+    ],
+    "implementation_guide": [
+      "1. Build a 'Permits' Space in ClickUp.",
+      "2. Define custom statuses that perfectly match the municipal review process (e.g., Intake, Plan Check, Corrections).",
+      "3. Ensure every task has a Custom Field for the Client's Email Address.",
+      "4. Set up Automations to trigger 'Send Email' whenever a task enters a new critical status phase."
+    ]
+  },
+  {
+    "toolSlug": "zapier",
+    "professionSlug": "home-stager",
+    "toolName": "Zapier",
+    "professionName": "Home Stager",
+    "coreProblem": "You own $50,000 worth of furniture scattered across multiple listings, and you constantly double-book inventory for new staging jobs.",
+    "utilityName": "The Inventory Locker",
+    "blueprintSteps": [
+      "📦 Trigger: New staging proposal accepted via PandaDoc or DocuSign.",
+      "📊 Action: Create a new project row in Google Sheets or Airtable.",
+      "✅ Action: Automatically assign an 'Unavailable' tag to the specific furniture packages requested in the proposal."
+    ],
+    "copyPasteElement": "PandaDoc (Document Completed) -> Zapier Formatter (Find Package Name) -> Airtable (Update Record Status to Unavailable)",
+    "affiliateLink": "https://zapier.com",
+    "businessValue": [
+      "Home staging is incredibly capital intensive. Your couches and art pieces are your money-makers, but keeping track of which mid-century modern sofa is in which house is a logistical nightmare. Accidentally promising a furniture package to a realtor when it's already sitting in another house makes you look deeply unprofessional.",
+      "Zapier connects your sales contracts directly to your inventory management. The moment a realtor signs your proposal, Zapier automatically reaches into your database and locks down that specific furniture package. You maintain perfect visibility of your available inventory, ensuring you never double-book a dining set again."
+    ],
+    "implementation_guide": [
+      "1. Connect your e-signature platform (PandaDoc/DocuSign) to Zapier as the trigger.",
+      "2. Ensure your contract includes a specific text field or dropdown for the 'Furniture Package' selected.",
+      "3. Map that package name into an Airtable or Google Sheets 'Find Record' action.",
+      "4. Use the 'Update Record' action to change that specific package's status to 'Deployed'."
+    ]
+  },
+  {
+    "toolSlug": "make-com",
+    "professionSlug": "private-investigator",
+    "toolName": "Make.com",
+    "professionName": "Private Investigator",
+    "coreProblem": "You spend hours manually scraping public records and social media for a subject, wasting time you should be spending in the field on surveillance.",
+    "utilityName": "The Digital Dragnet",
+    "blueprintSteps": [
+      "🕵️‍♂️ Trigger: New case file created in your CRM with the subject's name and known email.",
+      "🌐 Action: Trigger a series of HTTP requests to public data broker APIs (like Pipl or clearbit).",
+      "📄 Action: Aggregate the returned data and automatically append a comprehensive dossier document to the case file."
+    ],
+    "copyPasteElement": "CRM (New Record) -> HTTP Request (Data API) -> Tool: Text Aggregator -> Google Docs (Create Document from Text)",
+    "affiliateLink": "https://make.com",
+    "businessValue": [
+      "The initial OSINT (Open Source Intelligence) phase of an investigation is incredibly tedious. You are essentially doing high-level data entry—running a subject's name through half a dozen different paid databases just to build a baseline profile before you even hit the streets.",
+      "Make.com acts as your automated junior analyst. The moment you open a new case file, it instantly hits your trusted data APIs in the background, pulls all associated phone numbers, addresses, and social handles, and compiles a clean, readable dossier. It compresses 3 hours of manual clicking into 3 seconds of automated API calls."
+    ],
+    "implementation_guide": [
+      "1. Create a Make.com scenario triggered by a new record in your case management CRM.",
+      "2. Add HTTP modules for the specific data broker APIs you subscribe to.",
+      "3. Use the 'Text Aggregator' module to combine the JSON responses into readable paragraphs.",
+      "4. Connect Google Docs or Word to generate the final dossier and attach the link back to your CRM."
+    ]
+  },
+  {
+    "toolSlug": "zapier",
+    "professionSlug": "process-server",
+    "toolName": "Zapier",
+    "professionName": "Process Server",
+    "coreProblem": "Law firms demand instant proof of service, but generating official affidavits from your car while on the road is clunky and error-prone.",
+    "utilityName": "The Instant Affidavit",
+    "blueprintSteps": [
+      "📝 Trigger: You fill out a simple JotForm on your phone immediately after serving the papers (logging time, description, and GPS).",
+      "📄 Action: Zapier populates a standardized Google Docs Affidavit template with the form data.",
+      "📧 Action: Export the Doc as a PDF and instantly email it to the hiring paralegal."
+    ],
+    "copyPasteElement": "JotForm (New Submission) -> Google Docs (Create Document from Template) -> Google Drive (Find File & Export as PDF) -> Gmail (Send Email with Attachment)",
+    "affiliateLink": "https://zapier.com",
+    "businessValue": [
+      "As a process server, your entire reputation relies on bulletproof documentation and speed. Law firms want to know the absolute second their documents have been successfully served, and they need the official affidavit immediately so they can file it with the court. Making them wait until you get back to your home office is bad for business.",
+      "Zapier turns your smartphone into a mobile legal clerk. The moment you hand over the papers, you tap a few details into a mobile form. Zapier instantly injects that data into a legally formatted affidavit template, converts it to a PDF, and emails it to the paralegal before you've even pulled out of the driveway. It is flawless, instant proof of service."
+    ],
+    "implementation_guide": [
+      "1. Build a mobile-friendly JotForm with fields for Case Number, Time Served, Subject Description, and GPS.",
+      "2. Set Zapier to trigger on new JotForm submissions.",
+      "3. Use the 'Google Docs - Create Document from Template' action, mapping the form fields to your template variables.",
+      "4. Add a Gmail action to send the finalized PDF directly to the client's email address."
+    ]
+  },
+  {
+    "toolSlug": "make-com",
+    "professionSlug": "mobile-car-detailing",
+    "toolName": "Make.com",
+    "professionName": "Mobile Car Detailing",
+    "coreProblem": "Customers want immediate quotes based on their car size and condition, but you lose leads because you can't reply fast enough while your hands are wet.",
+    "utilityName": "The Instant Estimator",
+    "blueprintSteps": [
+      "🚗 Trigger: Customer submits a form selecting vehicle type (Sedan, SUV, Truck) and condition (Standard, Dirty, Disaster).",
+      "🧮 Action: Make.com uses routing logic to calculate the base price + condition multiplier.",
+      "📱 Action: Send an instant, personalized SMS with the estimated price range and a link to book."
+    ],
+    "copyPasteElement": "Webhook (Receive Form) -> Router -> Set Variable (Math Calculation) -> Twilio (Send SMS)",
+    "affiliateLink": "https://make.com",
+    "businessValue": [
+      "Mobile detailing is a hyper-local, impulse-driven service. When a customer decides their car is disgusting and needs to be cleaned, they want a price right now. If you are busy pressure-washing a driveway and take three hours to reply to their quote request, they will simply call the next detailer on Google.",
+      "Make.com acts as your automated estimator. It takes the variables from your website form—vehicle size and mess level—runs the math instantly, and texts the customer a surprisingly accurate quote with a booking link. You secure high-ticket detailing jobs completely hands-free while you're busy working on another vehicle."
+    ],
+    "implementation_guide": [
+      "1. Create a scenario starting with a Webhook connected to your website's pricing form.",
+      "2. Add a Make.com 'Router' to create different paths for Sedans, SUVs, and Trucks.",
+      "3. Use the 'Set Variable' tool to multiply the base rate by the customer's selected 'Condition' level.",
+      "4. Connect Twilio to send the finalized calculation in a friendly text message with a link to your calendar."
+    ]
+  },
+  {
+    "toolSlug": "airtable",
+    "professionSlug": "drone-real-estate-photographer",
+    "toolName": "Airtable",
+    "professionName": "Drone Real Estate Photographer",
+    "coreProblem": "Managing massive raw video files, edit revisions, and final delivery links across dozens of different realtors creates a tangled web of Dropbox folders.",
+    "utilityName": "The Media Delivery Hub",
+    "blueprintSteps": [
+      "📸 Create a 'Properties' base linking to your 'Realtor Clients' table.",
+      "🔗 Add a URL field for the 'Final Delivery Folder' (Dropbox/Drive link).",
+      "📧 Use Airtable Automations: When a checkbox for 'Edits Complete' is ticked, automatically email the beautiful delivery link to the Realtor."
+    ],
+    "copyPasteElement": "Trigger: Checkbox 'Edits Complete' is checked -> Action: Send Email -> Body: 'Hi {Realtor Name}, your media for {Property Address} is ready! Download here: {Folder Link}'",
+    "affiliateLink": "https://airtable.com",
+    "businessValue": [
+      "Delivering massive 4K drone files to real estate agents is always clunky. You end up with messy email threads full of expiring WeTransfer links or confusing Dropbox permissions. It makes your highly premium service feel cheap and disorganized at the exact moment the client is receiving the final product.",
+      "Airtable transforms your messy file management into a sleek, professional delivery hub. You log the property, paste the final gallery link, and simply click a checkbox when the edits are done. Airtable instantly fires off a beautifully formatted email to the agent with permanent access links. It elevates your brand and eliminates the 'where are my photos?' texts."
+    ],
+    "implementation_guide": [
+      "1. Build an Airtable base tracking 'Properties' and link it to your 'Clients' table.",
+      "2. Include a specific URL field for your finalized Dropbox/Google Drive delivery link.",
+      "3. Go to Airtable Automations and set 'When Record Matches Conditions: Edits Complete = True' as the trigger.",
+      "4. Configure the 'Send Email' action to deliver the link using the client's associated email address."
+    ]
+  },
+  {
+    "toolSlug": "zapier",
+    "professionSlug": "gutter-cleaning-service",
+    "toolName": "Zapier",
+    "professionName": "Gutter Cleaning Service",
+    "coreProblem": "You clean gutters once and the customer forgets you exist until their roof is overflowing again two years later.",
+    "utilityName": "The Annual Recapture Loop",
+    "blueprintSteps": [
+      "⚡ Trigger: Job marked 'Complete' and paid in your invoicing software (e.g., Jobber).",
+      "⏳ Action: Zapier waits exactly 11 months in the background.",
+      "📱 Action: Send a personalized text: 'Hi [Name], it's been almost a year since we cleaned the gutters at [Address]. Want to get on the schedule before the heavy rains?'"
+    ],
+    "copyPasteElement": "Jobber (Invoice Paid) -> Delay by Zapier (11 Months) -> Twilio (Send SMS reminder)",
+    "affiliateLink": "https://zapier.com",
+    "businessValue": [
+      "Home maintenance like gutter cleaning is purely preventative, which means homeowners never think about it until it's an emergency. If you are relying on them to remember your company name a year later, you are losing out on an incredibly easy recurring revenue stream.",
+      "Zapier completely automates your customer retention. The minute you finish a job and get paid, Zapier starts a silent 11-month countdown. Just before the heavy season starts next year, it pings the homeowner with a friendly reminder text. You magically fill your schedule with repeat business without spending a dime on marketing."
+    ],
+    "implementation_guide": [
+      "1. Connect your field service software (like Jobber or Housecall Pro) to Zapier as the trigger.",
+      "2. Add the 'Delay by Zapier' module and configure it to wait exactly 11 months.",
+      "3. Connect your Twilio or CRM messaging app.",
+      "4. Draft the SMS template, making sure to dynamically insert the customer's first name and their property address."
     ]
   }
 ]
