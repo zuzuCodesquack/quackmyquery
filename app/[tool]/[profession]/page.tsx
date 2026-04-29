@@ -101,16 +101,30 @@ export default async function TemplatePage({ params }: Props) {
             </h2>
             <p className="text-slate-500 mb-6 font-medium">Follow these exact steps to implement this blueprint in {data.toolName}:</p>
             <div className="space-y-4">
-              {data.implementation_guide.map((step, index) => {
+              {data.implementation_guide.map((step: string, index: number) => {
                 const cleanStep = step.replace(/^\d+\.\s*/, '');
                 return (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
-                      {index + 1}
+                  <div key={index} className="flex flex-col gap-3">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
+                        {index + 1}
+                      </div>
+                      <p className="text-lg text-slate-700 leading-relaxed pt-1">
+                        {cleanStep}
+                      </p>
                     </div>
-                    <p className="text-lg text-slate-700 leading-relaxed pt-1">
-                      {cleanStep}
-                    </p>
+                    {/* Render Power Snippet Inline if it matches the current step */}
+                    {data.powerSnippet && data.powerSnippet.targetStepIndex === index && (
+                      <div className="ml-12 mt-2 bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-800">
+                        <div className="flex justify-between items-center mb-3 border-b border-slate-700/50 pb-2">
+                          <span className="text-slate-400 text-xs font-semibold uppercase tracking-wider">Power Snippet</span>
+                          <CopyButton textToCopy={data.powerSnippet.code} />
+                        </div>
+                        <code className="block text-green-400 font-mono text-sm leading-relaxed whitespace-pre-wrap break-words">
+                          {data.powerSnippet.code}
+                        </code>
+                      </div>
+                    )}
                   </div>
                 );
               })}
