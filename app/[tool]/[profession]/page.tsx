@@ -81,9 +81,9 @@ export default async function TemplatePage({ params }: Props) {
         <div className="bg-slate-900 p-8 mt-12 rounded-2xl shadow-xl border border-slate-800">
           <div className="flex items-center justify-between mb-2">
              <h3 className="text-white font-black text-2xl tracking-wide">{data.utilityName}</h3>
-             <span className="bg-green-500/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Ready to Use</span>
+             <span className="bg-blue-500/10 text-blue-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Architecture Map</span>
           </div>
-          <p className="text-slate-400 text-sm mb-6 font-medium">Copy the exact formula below and paste it into {data.toolName}:</p>
+          <p className="text-slate-400 text-sm mb-6 font-medium">This is the high-level structural flow of your automation. Build this sequence in {data.toolName}:</p>
           <code className="block p-5 bg-slate-950 text-green-400 rounded-xl font-mono text-sm leading-relaxed shadow-inner break-words border border-slate-800/50">
             {data.copyPasteElement}
           </code>
