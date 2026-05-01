@@ -140,7 +140,7 @@
       "4. Use a Make.com Array Aggregator and paste the formula below to extract only the titles of the modules they failed to finish, then map it into the Gmail body."
     ],
     "powerSnippet": {
-      "code": "{{\n  map(\n    filter(2.modules; item -> item.completed = false);\n    \"module_title\"\n  )\n}}",
+      "code": "{{\n  map(\n    2.modules;\n    \"module_title\";\n    \"completed\";\n    false\n  )\n}}",
       "targetStepIndex": 3
     }
   },
@@ -662,7 +662,7 @@
       "4. Configure the 'Send Email' action to deliver the link using the client's associated email address."
     ],
     "powerSnippet": {
-      "code": "let table = base.getTable(\"Properties\");\nlet record = await input.recordAsync();\n\nif (!record.getCellValueAsString(\"Delivery Folder\").includes(\"dropbox.com\")) {\n    console.warn(\"Invalid delivery link. Halting automation.\");\n} else {\n    await table.updateRecordAsync(record.id, {\n        \"Status\": {name: \"Delivered & Emailed\"}\n    });\n}",
+      "code": "let config = input.config();\nlet table = base.getTable(\"Properties\");\n\nif (!config.deliveryFolder.includes(\"dropbox.com\")) {\n    console.warn(\"Invalid delivery link. Halting automation.\");\n} else {\n    await table.updateRecordAsync(config.recordId, {\n        \"Status\": {name: \"Delivered & Emailed\"}\n    });\n}",
       "targetStepIndex": 2
     }
   },
